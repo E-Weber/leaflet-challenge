@@ -38,5 +38,18 @@ function createMap(earthquakes) {
         id: "mapbox/streets-v11",
         accessToken: API_KEY
     });
+    // create the map
+    var myMap = L.map("mapid", {
+        center: [
+            37.09, -95.71
+        ],
+        zoom: 5,
+        layers: [streetmap, earthquakes]
+    });
+
+    // create streetmap
+    var baseMaps = {
+        "Street Map": streetmap
+    }
 
 }
