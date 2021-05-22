@@ -16,7 +16,7 @@ function createFeatures(earthquakeData) {
     }
 
     function pointFunction(feature, layer) {
-        return L.circleMarker(layer, { radius: feature.properties.mag * 10 });
+        return L.circleMarker(layer, { radius: feature.properties.mag * 2 });
     }
     var earthquakes = L.geoJSON(earthquakeData, {
         // add popups
@@ -50,6 +50,5 @@ function createMap(earthquakes) {
     // create streetmap
     var baseMaps = {
         "Street Map": streetmap
-    }
-
-}
+    };
+};
